@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  pg-primary:
+    container_name: pg-primary
+    ports:
+      - 5432:5432
+    image: bitnami/postgresql:15.3.0
+    environment:
+      - PGDATA=/bitnami/postgresql/data
+      - POSTGRESQL_POSTGRES_PASSWORD=password123
+      - POSTGRESQL_USERNAME=admin
+      - POSTGRESQL_PASSWORD=password123
+      - POSTGRESQL_DATABASE=sneakers
+    volumes:
+      - "pg-primary_data:/bitnami/postgresql"
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+volumes:
+  pg-primary_data:
+    driver: local

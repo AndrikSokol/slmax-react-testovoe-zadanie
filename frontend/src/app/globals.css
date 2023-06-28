@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type="text"],
+input[type="number"],
+textarea {
+  @apply w-full py-1 px-4 rounded-md outline-none border  md:max-w-none;
+}
+
+@layer components {
+  .btn-blue {
+    @apply text-white  bg-blue-400 px-4 py-2 rounded-md cursor-pointer hover:opacity-90    ease-in-out;
+  }
+  .btn-gray {
+    @apply text-white bg-slate-600 px-4 py-2 rounded-md cursor-pointer hover:opacity-90    ease-in-out;
+  }
+  .btn-red {
+    @apply text-white bg-red-500 px-4 py-2 rounded-md cursor-pointer hover:opacity-90    ease-in-out;
+  }
+}
