@@ -10,8 +10,8 @@ type CardItemProps = {
 const CardItem: FC<CardItemProps> = ({ sneaker }) => {
   return (
     <div className="grid grid-rows-[220px_150px_30px] sm:max-w-xs ">
-      <div className=" mx-auto ">
-        <Image style={{ objectFit: "cover" }} src={sneaker.image} alt={sneaker.title} width={250} height={220} />
+      <div className=" mx-auto  overflow-hidden">
+        <Image style={{ objectFit: "contain" }} src={sneaker.image} alt={sneaker.title} width={250} height={220} />
       </div>
       <div className="py-4">
         <div className="text-xl font-medium">Кроссовки : {sneaker.title}</div>

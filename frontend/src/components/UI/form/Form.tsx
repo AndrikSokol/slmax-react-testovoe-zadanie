@@ -97,9 +97,15 @@ const Form = () => {
             })
           }
         ></input>
-        <h1 className="text-lg font-semibold  py-2">Добавьте картинку:</h1>
+        <div className="flex gap-4 items-center">
+          <h1 className="text-lg font-semibold  py-2">Добавьте картинку с сайта </h1>
+          <a className="hover:scale-[102%] underline" href="https://sportomax.com/" target="blank">
+            Перейти на сайт
+          </a>
+        </div>
+
         <div className="flex gap-2 justify-between">
-          <input type="text" placeholder="https://sport/sneaker" onChange={(e) => (photo = e.target.value)}></input>
+          <input type="text" placeholder="https://sportomax.com/" onChange={(e) => (photo = e.target.value)}></input>
           <button className="btn-blue" onClick={addPhoto}>
             Добавить
           </button>
